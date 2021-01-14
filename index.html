@@ -5,24 +5,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homepage</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <p><a href="page2.html">Pricing</a> || <a href="page3.html">About</a></p>
-    <hr>
-    <h1>Welcome to my store!</h1>
-    <p>This store was established in 2021 with the sole purpose of bringing you products that you'll enjoy. We pride ourselves on customer service.</p>
-    <p>Come see what's in stock!</p>
-    <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c3RvcmV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
-    <hr>
-    <h2>Available Products</h2>
-    <h3>Chicken Nugget</h3>
-    <p><img src="https://images.unsplash.com/photo-1550513008-8cd1a9b590c8?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8Y2hpY2tlbiUyMG51Z2dldHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=250&q=30"></p>
-    <h3>Banana</h3>
-    <p><img src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8YmFuYW5hfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"></p>
-    <h3>Lightbulb (electricity not included)</h3>
-    <p><img src="https://images.unsplash.com/photo-1485119502162-016e4409beab?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8bGlnaHRidWxifGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"></p>
-    <hr>
-    <h4>Links</h4>
-    <p><a href="page2.html">Pricing</a> || <a href="page3.html">About</a></p>
+
+    <p class="text-center font-semibold text-blue-700"><a href="page2.html">Pricing</a> || <a href="page3.html">About</a></p>
+    <h1 class="font-bold text-6xl text-blue-400 text-center border-2 border-indigo-300 rounded-full mx-5 my-5">Welcome to my store!</h1>
+    <p class="text-center text-lg mx-4 my-4">This store was established in 2021 with the sole purpose of bringing you products that you'll enjoy. We pride ourselves on customer service.</p>
+    <p class="text-center font-semibold text-xl text-indigo-600 mx-4 my-4">Come see what's in stock!</p>
+    <img class="mx-auto" src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c3RvcmV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+    <hr class="my-5">
+    <h2 class="text-center font-semibold text-xl text-indigo-600 mx-4 my-10">Available Products</h2>
+
+    <!-- pictures and products start here -->
+
+    <div class="md:flex">
+        <div class="w-1/3 m-2">
+            <div class="font-bold text-center">Chicken Nugget</div>
+            <div>
+                <img src="https://images.unsplash.com/photo-1562967914-608f82629710?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8Y2hpY2tlbiUyMG51Z2dldHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+            </div>
+        </div>
+        
+        <div class="w-1/3 m-2">
+            <div class="font-bold text-center">Banana</div>
+            <div>
+                <img src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8YmFuYW5hfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+            </div>
+        </div>
+            
+        <div class="w-1/3 m-2">
+            <div class="font-bold text-center">Lightbulb (electricity not included)</div>
+            <div>
+                <img src="https://images.unsplash.com/photo-1485119502162-016e4409beab?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8bGlnaHRidWxifGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
+            </div>
+        </div>
+    </div>
+
+    <!-- pictures and products end here -->
+
+    <div class="text-center font-bold text-lg mx-10 my-10">
+        Interested in learning more? Send us a note!
+    </div>
+    
+   <!-- form starts here-->
+
+   <form netlify>
+    <div class="mx-5 my-2">
+        <label class="block mt-5 font-bold text-indigo-500" for="name">Name</label>
+        <input class="border border-indigo-500 rounded focus:ring-indigo-500 focus:border-indigo-500" type="text" id="name" name="name">
+    </div>  
+
+    <div class="mx-5 my-2">
+        <label class="block mt-5 font-bold text-indigo-500" for="email">Email</label>
+        <input class="border border-indigo-500 rounded focus:ring-indigo-500 focus:border-indigo-500" type="text" id="email" name="email">
+    </div>
+
+    <div class="mx-5 my-2">
+        <label class="block mt-5 font-bold text-indigo-500" for="inquiry">What would you like to ask?</label>
+        <textarea rows="5" class="p-2 w-full border border-indigo-500 rounded focus:border-indigo-500 focus:ring-indigo-500
+      focus:border-indigo-500" id="order" name="order"></textarea>
+    </div>
+
+    <div class="mx-5 my-2">
+        <label class="block font-bold text-indigo-500" for="joinnewsletter">Would you like to join our newsletter?</label>
+        <input class="focus:ring-indigo-500" type="checkbox" id="joinnewsletter" name="joinnewsletter" checked>
+    </div>
+
+    <p><button class="mx-5 my-2 py-2 px-4 bg-indigo-700 text-white rounded">Submit</button></p>
+  </form>
+
+  <!-- form ends here -->
+
+  <div class="mx-4 my-4">
+    <div class="text-center font-semibold text-xl text-indigo-600 mx-4 my-4">Links</div>
+    <p class="text-center font-semibold text-blue-700"><a href="page2.html">Pricing</a> || <a href="page3.html">About</a></p>
+</div>
+
 </body>
 </html>
